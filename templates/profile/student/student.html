@@ -1,0 +1,45 @@
+
+                {% extends 'profile/student/temp.html' %}
+                {% block body %}
+                <div class="col-lg-10 right" style="width: 100%">
+                    
+                    <div class="row" style="margin-bottom:3%">
+                    </div>
+                    
+                    <div class="row" style="margin-bottom: 5px;">
+                        {% for quiz in data:%}
+                        <div class="col-lg-4 sample">
+                            <div class="exam">
+                                <div class="row head">
+                                    <div class="col-lg-12"><p class="name">{{quiz[0]}}</p></div>
+                                </div>
+                                <hr style="margin-top: 6px;">
+                                <table class="info">
+                                    <tr>
+                                      <td>Total Questions</td>
+                                      <td><i class="fas fa-arrow-right"></i></td>
+                                      <td>{{quiz[2]}}</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Total Marks</td>
+                                      <td><i class="fas fa-arrow-right"></i></td>
+                                      <td>{{quiz[2]}}</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Total Time</td>
+                                      <td><i class="fas fa-arrow-right"></i></td>
+                                      <td>{{quiz[1]}} Minutes</td>
+                                    </tr>
+                                    <tr>
+                                      <td>My Result</td>
+                                      <td><i class="fas fa-arrow-right"></i></td>
+                                      <td>{{quiz[3]}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                </div>
+                {% endblock body %}

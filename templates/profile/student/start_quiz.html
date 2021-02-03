@@ -1,0 +1,94 @@
+{% extends 'profile/student/temp.html' %}
+                {% block body %}
+                <div class="col-lg-10 right" style="width: 100%">
+                    
+                    <div class="row" style="margin-bottom: 5px;">
+                        <div class="col-lg-12 settings">
+                            <div class="box">
+                                <h4 style="text-align: center;margin: 10px;">{{quiz[0]}}</h4>
+                                <hr style="margin-bottom: 20px;">
+                                <div class="row">
+                                    <div class="col-lg-8" style="padding-left: 40px;"> 
+                                        <form method="POST" action="finish">
+                                            {% for question in questions:%}
+                                            {% set i = loop.index %}
+                                            <p> {{question[0]}} </p>
+                                                {% for asn in question[1]:%}
+                                                <input type="radio" name="q{{ i }}" value="{{asn}}" style="margin: 10px;" checked> {{asn}} <br>
+                                                {% endfor %}
+                                            <hr style="margin-bottom: 20px;">
+                                            {% endfor %}
+                                            <button type="submit" class="btn btn-primary" style="margin-top: 40px; width: 40%;" id="finish_quiz">Submit Answers</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-lg-3" style="border: 1px solid black;">
+                                        <table style="margin: 20px; font-size: 15px;">
+                                            <tr>
+                                              <td>Total Questions</td>
+                                              <td><i class="fas fa-arrow-right" style="color:#31a36e;"></i></td>
+                                              <td>{{quiz[3]}}</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Total Marks</td>
+                                              <td><i class="fas fa-arrow-right" style="color:#31a36e;"></i></td>
+                                              <td>{{quiz[3]}}</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Total Time</td>
+                                              <td><i class="fas fa-arrow-right" style="color:#31a36e;"></i></td>
+                                              <td><span id = "minutes">{{quiz[1]}}</span> Minutes</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Ended</td>
+                                              <td><i class="fas fa-arrow-right" style="color:#31a36e;"></i></td>
+                                              <td>{{quiz[2]}} Times</td>
+                                            </tr>
+                                        </table>
+                                        <hr>
+                                        <div style="text-align: center;">Quiz closes in <span id="time"></span> minutes!</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <script>
+                        function startTimer(duration, display) {
+                            var start = Date.now(),
+                                diff,
+                                minutes,
+                                seconds;
+                            function timer() {
+                                // get the number of seconds that have elapsed since 
+                                // startTimer() was called
+                                diff = duration - (((Date.now() - start) / 1000) | 0);
+
+                                // does the same job as parseInt truncates the float
+                                minutes = (diff / 60) | 0;
+                                seconds = (diff % 60) | 0;
+
+                                minutes = minutes < 10 ? "0" + minutes : minutes;
+                                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                                display.textContent = minutes + ":" + seconds; 
+
+                                if (diff <= 0) {
+                                    // add one second so that the count down starts at the full duration
+                                    // example 05:00 not 04:59
+                                    document.getElementById("finish_quiz").click();
+                                }
+                            };
+                            // we don't want to wait a full second before the timer starts
+                            timer();
+                            setInterval(timer, 1000);
+
+                        }
+
+                        window.onload = function () {
+                            var fiveMinutes = document.getElementById("minutes").innerText * 60 * 1,
+                                display = document.querySelector('#time');
+                            startTimer(fiveMinutes, display);
+                        };
+                    </script>
+	
+                </div>
+                {% endblock body %}

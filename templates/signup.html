@@ -1,0 +1,58 @@
+
+        {% extends 'temp.html' %}
+        
+        {% block body %}
+            <div class="row" style="margin-top: 5%;">
+                <div class="col-lg-3">
+                </div>
+
+                <div class="col-lg-6 login-card">
+                    {% if success %}
+                    <div class="alert alert-success" role="alert">
+                        {{ success }}
+                    </div>
+                    {% elif error %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </div>
+                    {% elif fail %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ fail }}
+                    </div>
+                    {% endif %}
+                    <h4 style="font-family: initial; text-align: center;" >Online Quiz System</h4>
+                    <hr style="border-top: 2px solid rgba(0,0,0,.1)">
+                    <form method="POST" class="login-form">
+                        <div class="form-row" style="margin-bottom: 15px;">
+                            <div class="form-group col-md-6" style="margin-bottom: 0px;">
+                              <h7>First Name.</h7>
+                              <input type="text" name="fname" class="form-control" placeholder="First Name.">
+                            </div>
+                            <div class="form-group col-md-6" style="margin-bottom: 0px;">
+                              <h7>Last Name.</h7>
+                              <input type="text" name="lname" class="form-control" placeholder="Last Name.">
+                            </div>
+                        </div>
+                        <h7>Enter Your Email.</h7>
+                        {% if email %}
+                        <input type="email" value="{{email}}" name="email" class="form-control" name="email" placeholder="Email address" style="margin-bottom: 15px;" required>
+                        {% else %}
+                        <input type="email" class="form-control" name="email" placeholder="Email address" style="margin-bottom: 15px;" required>
+                        {% endif %}
+
+                        <h7>Who Are You.</h7>
+                        <select id="inputState" class="form-control" style="margin-bottom: 15px;" name="role">
+                            <option value="2" selected>Student</option>
+                            <option value="1">Teacher</option>
+                        </select>
+                        <h7>Enter Your Password.</h7>
+                        <input type="password" name="password" class="form-control" name="password" placeholder="Password" style="margin-bottom: 15px;" required>
+                        <h7>Confirm Your Password.</h7>
+                        <input type="password" name="vpassword" class="form-control" name="password" placeholder="Password" style="margin-bottom: 15px;" required>
+                        <button type="submit" class="btn btn-success" style="width: 100%; text-align: center;margin-bottom: 10px;">Sign up for Quizz</button>
+                        <p style="text-align: center; color: gray; font-size: 13px;">Have an account? <a href="#" style="color: green;">Login Now</a></p>
+                    </form>
+                </div>
+            </div>
+            {% endblock body %}
+		

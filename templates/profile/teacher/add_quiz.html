@@ -1,0 +1,47 @@
+{% extends 'profile/teacher/temp.html' %}
+                {% block body %}
+                <div class="col-lg-10 right" style="width: 100%">
+                    
+                    <div class="row" style="margin-bottom: 5px;">
+                        <div class="col-lg-12 settings">
+                            <div class="box">
+                                {% if fail %}
+                                <div class="alert alert-danger" role="alert">
+                                    {{ fail }}
+                                </div>
+                                {% endif %}
+                                <form method="POST" enctype="multipart/form-data">
+                                  <div class="form-group">
+                                    <label>Upload your quiz.</label>
+                                    <input type="file" class="form-control" name="quiz" required>
+                                  </div>
+                                    <table style="margin-bottom: 40px;">
+                                        <tr>
+                                            <th>
+                                                How to upload the Quiz?
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>- write your quiz in text file as following:</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-left: 20px;padding-top: 20px">1) how to upload quize?</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-left: 20px;">A) Upload [right answer]</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-left: 20px;">B) Download</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-left: 20px;">C) Delete</td>
+                                        </tr>
+                                    </table>
+                                  <button type="submit" class="btn btn-primary">Upload</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                {% endblock body %}

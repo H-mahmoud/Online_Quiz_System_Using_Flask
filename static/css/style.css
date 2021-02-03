@@ -1,0 +1,223 @@
+html, body{
+    height: 100%;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-size: cover;
+}
+
+.login-card {
+    background: white;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    font-family: auto;
+    
+}
+
+.login-form {
+    margin-top: 30px;
+}
+
+.profile {
+    background: #ecf0f5;
+}
+
+.profile nav a{
+    color: black;
+    font-family: 'Brush Script MT', cursive;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 25px;
+}
+
+.profile nav form button{
+    border: 1px solid black;
+    background: transparent;
+    color: black;
+    text-align: center;
+    padding: 5px;
+}
+
+.profile .dash-board div .left{
+    background-color: #1a2226;
+    color: white;
+}
+
+.profile .dash-board div .left img{
+    width: 50%;
+    margin: 20%;
+    margin-top: 10%;
+    padding: 10px;
+    color: white;
+}
+
+.profile .dash-board div .left ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+.profile .dash-board div .left a{
+    color: white;
+    text-decoration: none;
+}
+
+.profile .dash-board div .left a :hover{
+    background-color: #ecf0f533;
+    border-left: 3px solid #31a36e;
+}
+
+.profile .dash-board div .left li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+
+.profile .dash-board div .left .active{
+    background-color: #ecf0f533;
+    border-left: 3px solid #31a36e;
+}
+
+.profile .dash-board div .left li i{
+    margin-right: 10px;
+}
+
+.profile .dash-board div .right{
+    padding-top: 30px;
+}
+
+.profile .dash-board div .right .info{
+    width: 100%;
+    padding: 10px;
+}
+
+.profile .dash-board div .right .info .image{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 16px;
+}
+
+.profile .dash-board div .right .info .name{
+    float: right;
+    margin: 30px;
+    font-weight: bold;
+    font-family: serif;
+    font-size: 18px;
+}
+
+.profile .dash-board div .right .info div{
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-top: 3px solid #31a36e;
+}
+
+
+.profile .dash-board div .right .summary{
+    width: 100%;
+    padding: 10px;
+}
+
+.profile .dash-board div .right .summary .info{
+    width: 100%;
+    background-color: white;
+    border-top: 3px solid #31a36e;
+}
+
+.profile .dash-board div .right .summary table{
+    margin: 0px;
+    font-family: serif;
+    font-size: 15px;
+}
+
+.profile .dash-board div .right .sample{
+    width: 100%;
+    padding: 10px;
+}
+
+.profile .dash-board div .right .sample .exam{
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    padding-top: 10px;
+    border-top: 3px solid #31a36e;
+}
+
+.profile .dash-board div .right .sample .exam .head .name{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.profile .dash-board div .right .sample .exam .head form{
+    float: right;
+}
+
+.profile .dash-board div .right .sample .exam .info{
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.profile .dash-board div .right .sample .exam .info i{
+    color:#31a36e;
+}
+
+.profile .dash-board div .right .sample .exam .forms{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 2px;
+    text-align: center;
+    width: 100%;
+}
+
+.profile .dash-board div .right .sample .exam .forms button{
+    margin-right: 2px;
+    text-align: center;
+}
+
+.profile .dash-board div .right .sample .exam .forms .copy{
+    background-color:#31a36e;
+}
+
+.profile .dash-board div .right .sample .exam .forms .copy i{
+    color: white;
+}
+
+.profile .dash-board div .right .foot{
+    width: 100%;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.profile .dash-board div .right .foot div{
+    width: 100%;
+    background-color: #0000001a;
+    padding: 10px;
+    text-align: center;
+}
+
+.profile .dash-board div .right .foot div:hover{
+    width: 100%;
+    background-color: #00000080;
+    padding: 10px;
+    text-align: center;
+}
+
+.profile .dash-board div .right .settings{
+    width: 100%;
+    padding: 10px;
+}
+
+.profile .dash-board div .right .settings .box{
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    padding-top: 10px;
+    border-top: 3px solid #31a36e;
+}
+
+.summary table {
+    width: 100%;
+}

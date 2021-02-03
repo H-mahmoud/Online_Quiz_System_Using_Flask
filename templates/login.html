@@ -1,0 +1,28 @@
+            {% extends 'temp.html' %}
+            {% block body %}
+            <div class="row" style="margin-top: 7%;">
+                <div class="col-lg-3">
+                </div>
+
+                <div class="col-lg-6 login-card">
+                    {% if fail %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ fail }}
+                    </div>
+                    {% endif %}
+                    <h4 style="font-family: initial; text-align: center;" >Online Quiz System</h4>
+                    <hr style="border-top: 2px solid rgba(0,0,0,.1)">
+                    <form method="POST" class="login-form">
+                        <h7>Enter Your Email.</h7>
+                        <input type="email" class="form-control" name="email" placeholder="Email address" style="margin-bottom: 15px;" required>
+                        <h7>Enter Your Password.</h7>
+                        <input type="password" class="form-control" name="password" placeholder="Password" style="margin-bottom: 5px;" required>
+                        <div  style="text-align: right; margin-bottom: 13px; font-size: 15px;">
+                            <a href="#" style="color: red;font-size: 13px;">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-success" style="width: 100%; text-align: center;margin-bottom: 10px;">Sign in for Quizz</button>
+                        <p style="text-align: center; color: gray; font-size: 13px;">Don't have an account? <a href="#" style="color: red;">Register Now</a></p>
+                    </form>
+                </div>
+            </div>
+            {% endblock body %}

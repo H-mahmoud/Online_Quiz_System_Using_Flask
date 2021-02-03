@@ -1,0 +1,53 @@
+{% extends 'profile/teacher/temp.html' %}
+{% block body %}
+                <div class="col-lg-10 right" style="width: 100%">
+                    
+                    <div class="row" style="margin-bottom: 5px;">
+                        <div class="col-lg-12 settings">
+                            <div class="box">
+                                <h4 style="text-align: center;margin: 10px;">{{quiz[0]}}</h4>
+                                <hr style="margin-bottom: 20px;">
+                                <div class="row">
+                                    <div class="col-lg-8" style="padding-left: 40px;"> 
+                                        <form method="get" enctype="multipart/form-data">
+                                            {% for question in questions:%}
+                                            <p> {{question[0]}} </p>
+                                                {% for asn in question[1]:%}
+                                                <input type="radio" name="q1" value="{{asn}}" style="margin: 10px;" checked> {{asn}} <br>
+                                                {% endfor %}
+                                            <span style="color:#31a36e;font-weight: bold;margin-left: 5px;">Answer</span> {{question[2]}} <br>
+                                            <hr style="margin-bottom: 20px;">
+                                            {% endfor %}
+                                        </form>
+                                    </div>
+                                    <div class="col-lg-3" style="border: 1px solid black;">
+                                        <table style="margin: 20px; font-size: 15px;">
+                                            <tr>
+                                              <td>Total Questions</td>
+                                              <td><i class="fas fa-arrow-right" style="color:#31a36e;"></i></td>
+                                              <td>{{quiz[3]}}</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Total Marks</td>
+                                              <td><i class="fas fa-arrow-right" style="color:#31a36e;"></i></td>
+                                              <td>{{quiz[3]}}</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Total Time</td>
+                                              <td><i class="fas fa-arrow-right" style="color:#31a36e;"></i></td>
+                                              <td>{{quiz[1]}} Minutes</td>
+                                            </tr>
+                                            <tr>
+                                              <td>Ended</td>
+                                              <td><i class="fas fa-arrow-right" style="color:#31a36e;"></i></td>
+                                              <td>{{quiz[2]}} Times</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                {% endblock body %}
