@@ -15,3 +15,11 @@ With the Quiz Application, special users you can call Teachers will be allowed t
 - Students can view quiz information and their result in their profile
 - Teachers and Students can update their profile information
 
+#
+### Images from the system:-
+<img src = "images/Home.png">
+<img src = "images/Teacher.png">
+<img src = "images/Quiz.png">
+<img src = "images/Student.png">
+
+
